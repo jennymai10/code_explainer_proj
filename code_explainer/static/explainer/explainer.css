@@ -1,46 +1,47 @@
-/* General Styles */
-body {
+/* explainer/explainer.css */
+
+/* Light Theme */
+.light-theme {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f9f7f3; /* Light beige */
+    color: #3d3d3d; /* Dark grey */
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-    color: #2c3e50;
+.light-theme h1, .light-theme h2, .light-theme h3, .light-theme h4 {
+    color: #6a994e; /* Dark olive green */
     margin-bottom: 1rem;
 }
 
-h1 {
+.light-theme h1 {
     font-size: 2.5rem;
     text-align: center;
     margin-top: 2rem;
 }
 
-h2 {
+.light-theme h2 {
     font-size: 2rem;
     margin-top: 1.5rem;
 }
 
-h3 {
+.light-theme h3 {
     font-size: 1.75rem;
     margin-top: 1.25rem;
 }
 
-h4 {
+.light-theme h4 {
     font-size: 1.5rem;
     margin-top: 1rem;
 }
 
-p {
+.light-theme p {
     margin: 0.5rem 0;
 }
 
-/* Form Styles */
-form {
-    background-color: #ffffff;
+.light-theme form {
+    background-color: #e8e6e1; /* Lighter beige */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -48,10 +49,11 @@ form {
     margin: 2rem auto;
 }
 
-textarea {
+.light-theme textarea {
     width: 100%;
     padding: 1rem;
-    border: 1px solid #ddd;
+    background-color: #e8e6e1;
+    border: 0px;
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
@@ -60,9 +62,9 @@ textarea {
     min-height: 150px;
 }
 
-input[type="submit"] {
-    background-color: #007bff;
-    color: white;
+.light-theme input[type="submit"] {
+    background-color: #a7c957; /* Light olive green */
+    color: #3d3d3d; /* Dark grey */
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
@@ -71,26 +73,24 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #0056b3;
+.light-theme input[type="submit"]:hover {
+    background-color: #9abf50; /* Slightly darker olive green */
 }
 
-/* Code Display Styles */
-pre.code {
-    background-color: #2d2d2d;
-    color: #f8f8f8;
+.light-theme pre.code {
+    background-color: #f9f7f3; /* Light beige */
+    color: #3d3d3d; /* Dark grey */
     padding: 1rem;
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     overflow-x: auto;
     margin: 1rem 0;
-    white-space: pre-wrap; /* Preserve line breaks and wrap text */
+    white-space: pre-wrap;
 }
 
-/* Explanation Styles */
-.explanation {
-    background-color: #ffffff;
+.light-theme .explanation {
+    background-color: #e8e6e1; /* Lighter beige */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -98,65 +98,201 @@ pre.code {
     margin: 2rem auto;
 }
 
-.component {
+.light-theme .component {
     margin-bottom: 1.5rem;
     padding: 1rem;
-    border-left: 4px solid #007bff;
-    background-color: #f9f9f9;
+    border-left: 4px solid #a7c957; /* Light olive green */
+    background-color: #f9f7f3; /* Light beige */
     border-radius: 4px;
 }
 
-.component h4 {
-    color: #007bff;
+.light-theme .component h4 {
+    color: #a7c957; /* Light olive green */
     margin-bottom: 0.5rem;
 }
 
-.component p {
-    color: #555;
+.light-theme .component p {
+    color: #555; /* Medium grey */
 }
 
-pre.code-snippet {
-    background-color: #2d2d2d;
-    color: #f8f8f8;
+.light-theme pre.code-snippet {
+    background-color: #f9f7f3; /* Light beige */
+    color: #3d3d3d; /* Dark grey */
     padding: 0.75rem;
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
     margin-top: 0.5rem;
-    white-space: pre-wrap; /* Preserve line breaks and wrap text */
+    white-space: pre-wrap;
 }
 
-/* Error Message Styles */
-.error {
-    color: #dc3545;
-    background-color: #f8d7da;
+.light-theme .error {
+    color: #d32f2f; /* Dark pastel red */
+    background-color: #fce4ec; /* Very light pastel red */
     padding: 1rem;
     border-radius: 4px;
-    border: 1px solid #f5c6cb;
+    border: 1px solid #f8bbd0; /* Lighter pastel red */
     margin: 1rem auto;
     max-width: 800px;
     text-align: center;
 }
 
+/* Dark Theme */
+.dark-theme {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #282c34; /* Dark grey */
+    color: #c8c8c8; /* Light grey */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4 {
+    color: #89b76f; /* Light green */
+    margin-bottom: 1rem;
+}
+
+.dark-theme h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.dark-theme form {
+    background-color: #3e4451; /* Darker grey */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.dark-theme textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #3e4451;
+    border: 0px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+    min-height: 150px;
+    color: #c8c8c8;
+}
+
+.dark-theme input[type="submit"] {
+    background-color: #89b76f; /* Light green */
+    color: #282c34; /* Dark text for contrast */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dark-theme input[type="submit"]:hover {
+    background-color: #7bb063; /* Slightly darker green */
+}
+
+.dark-theme pre.code {
+    background-color: #21252b; /* Slightly darker grey */
+    color: #dcdcdc; /* Lighter grey for code text */
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+    white-space: pre-wrap;
+}
+
+.dark-theme .explanation {
+    background-color: #3e4451; /* Darker grey */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.dark-theme .component {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-left: 4px solid #89b76f; /* Light green */
+    background-color: #282c34; /* Dark grey */
+    border-radius: 4px;
+}
+
+.dark-theme .component h4 {
+    color: #89b76f; /* Light green */
+    margin-bottom: 0.5rem;
+}
+
+.dark-theme .component p {
+    color: #c8c8c8; /* Light grey */
+}
+
+.dark-theme pre.code-snippet {
+    background-color: #21252b; /* Slightly darker grey */
+    color: #dcdcdc; /* Lighter grey for code text */
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+}
+
+.dark-theme .error {
+    color: #e53935; /* Dark red */
+    background-color: #424242; /* Darker grey */
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #616161; /* Darker grey border */
+    margin: 1rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Common Styles */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #a7c957; /* Light olive green */
+    color: #3d3d3d; /* Dark grey */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#theme-toggle:hover {
+    background-color: #9abf50; /* Slightly darker olive green */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    h1 {
+    .light-theme h1, .dark-theme h1 {
         font-size: 2rem;
     }
 
-    h2 {
+    .light-theme h2, .dark-theme h2 {
         font-size: 1.75rem;
     }
 
-    h3 {
+    .light-theme h3, .dark-theme h3 {
         font-size: 1.5rem;
     }
 
-    h4 {
+    .light-theme h4, .dark-theme h4 {
         font-size: 1.25rem;
     }
 
-    form, .explanation {
+    .light-theme form, .light-theme .explanation, .dark-theme form, .dark-theme .explanation {
         padding: 1rem;
     }
 }

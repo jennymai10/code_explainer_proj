@@ -7,7 +7,8 @@
     <title>Python Code Explainer</title>
     <link rel="stylesheet" href="{% static 'explainer/explainer.css' %}">
 </head>
-<body>
+<body class="dark-theme">
+    <button id="theme-toggle">Change Theme</button>
     <h1>Python Code Explainer</h1>
     <form method="post">
         {% csrf_token %}
@@ -37,5 +38,15 @@
             </div>
         </div>
     {% endif %}
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+        });
+    </script>
 </body>
 </html>
