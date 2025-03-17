@@ -64,11 +64,16 @@ def generate_explanation(code):
         explanation = re.sub(r'^```json\s*|\s*```$', '', explanation, flags=re.MULTILINE)
         explanation = explanation.strip()
 
-        print(explanation)
         # Parse the JSON-like output into a Python dictionary
         try:
             explanation_dict = json.loads(explanation)
-            return explanation_dict
+            if isinstance(explanation_dict, dict) and "components" in explanation_dict and isinstance(explanation_dict["components"], list):
+                for component in explanation_dict["components"]:
+                    if "type" in component and isinstance(component["type"], str):
+                        component["type"] = component["type"].replace("_", " ")
+                return explanation_dict
+            else:
+                return {"error": "Invalid explanation format."}
         except json.JSONDecodeError:
             return {"error": "Failed to parse explanation."}
     except Exception as e:
