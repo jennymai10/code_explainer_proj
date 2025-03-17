@@ -23,14 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-&l^)o6@a5d1x+q@@#a2%cp(#rx$8ssa-chdmt2fzi3@rgql445"
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['codeexplainer-gkmf.onrender.com']
 
 
 # Application definition
-
+    
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
