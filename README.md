@@ -1,4 +1,4 @@
-# Python Code Explainer
+# Python Code Explainer Prototype
 
 A Django-based web application that explains Python code using the Gemini API. This project allows users to input Python code and receive a detailed explanation of its functionality.
 
