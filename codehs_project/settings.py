@@ -25,11 +25,11 @@ SECRET_KEY = "django-insecure-&l^)o6@a5d1x+q@@#a2%cp(#rx$8ssa-chdmt2fzi3@rgql445
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['codeexplainer-gkmf.onrender.com']
+ALLOWED_HOSTS = ['codeexplainer-gkmf.onrender.com', '.onrender.com']
 
 
 # Application definition
-    
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -116,13 +116,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'explainer/static'),
 ]
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}

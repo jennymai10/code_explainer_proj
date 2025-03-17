@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: code-explainer
+    runtime: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+    startCommand: |
+      gunicorn codehs_project.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: STATIC_URL
+        value: "/static/"
+      - key: STATIC_ROOT
+        value: "/var/www/static/"
