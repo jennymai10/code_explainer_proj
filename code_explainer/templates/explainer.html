@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Explainer</title>
+    <link rel="stylesheet" href="{% static 'explainer/explainer.css' %}">
+</head>
+<body>
+    <h1>Python Code Explainer</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="code" rows="10" cols="50" placeholder="Enter your Python code here...">{{ code }}</textarea><br>
+        <input type="submit" value="Explain">
+    </form>
+    {% if error %}
+        <div class="error">
+            <p>{{ error }}</p>
+        </div>
+    {% elif explanation %}
+        <div class="explanation">
+            <h2>Code:</h2>
+            <pre class="code">{{ code }}</pre>
+            <h2>Explanation:</h2>
+            <div class="explanation-content">
+                <h3>Overview:</h3>
+                <p>{{ explanation.overview }}</p>
+                <h3>Components:</h3>
+                {% for component in explanation.components %}
+                    <div class="component">
+                        <h4>{{ component.type|replace:"_":" "|title }}</h4>
+                        <pre class="code-snippet">{{ component.code_snippet }}</pre>
+                        <p>{{ component.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>
