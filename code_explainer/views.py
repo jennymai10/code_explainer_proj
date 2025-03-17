@@ -3,7 +3,8 @@ import ast
 import json
 import re
 import google.generativeai as genai
-import load_dotenv
+from dotenv import load_dotenv
+load_dotenv()
 import os
 
 genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
