@@ -29,7 +29,7 @@
                 <h3>Components:</h3>
                 {% for component in explanation.components %}
                     <div class="component">
-                        <h4>{{ component.type|replace:"_":" "|title }}</h4>
+                        <h4>{{ component.type|title }}</h4>
                         <pre class="code-snippet">{{ component.code_snippet }}</pre>
                         <p>{{ component.description }}</p>
                     </div>
